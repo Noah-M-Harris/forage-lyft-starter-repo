@@ -11,7 +11,7 @@ class Spindler(ABC):
 
     def needs_service(self):
         self.update(self.last, datetime.today().date())
-        service_threshold_date = self.last.replace(year=self.last + 2)
+        service_threshold_date = self.last.replace(year=self.last + 3)
         
         if service_threshold_date < self.last:
             return True
